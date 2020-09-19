@@ -1,5 +1,6 @@
 from flask import Flask, url_for, render_template, request
 from retrieveStockInfo import stock_info
+from Prediction import ML
 app = Flask(__name__)
 
 
@@ -14,9 +15,9 @@ def stocks():
         ticker_tag = request.form['stock-input']
         analysis = stock_info(ticker_tag)
         results = analysis.get_info()
-        
-        #add your code here
-
+        print(results)
+        x = ML(ticker_tag)
+        x.get_prediction()
         return render_template('stocks.html', results = results)
     else:
         pass
