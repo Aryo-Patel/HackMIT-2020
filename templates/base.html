@@ -5,6 +5,16 @@
         <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/styles.css')}}" />
     </head>
     <body>
+        <nav id = "navbar">
+            <h1 id = "main-page"><a class = "link"  href= "/">Green View</a></h1>
+
+            <div id = "right-links">
+                <h4 class = "nav-elem" id = "home-page"><a class = "link" href = "/">Home</a></h4>
+                <h4  class = "nav-elem" id= "stocks"><a class = "link"  href = "/stocks">Stocks</a></h4>
+                <h4 class = "nav-elem" id = "learn"><a  class = "link" href = "/learn">Learn</a></h4>
+                <h4 class = "nav-elem" id = "trends"><a class = "link"  href = "/trends">Trends</a></h4>
+            </div>
+        </nav>
         {% block body %}{% endblock %}
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
         <script src = "{{url_for('static', filename='javascript/animations.js')}}"></script>

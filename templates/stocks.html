@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div id = "stock-content-wrapper">
+    <div id = "stock-title">
+        <h1 id = "stock-welcome">Stock Metrics</h1>
+        <h5 id = "stock-secondary">Enter a ticker tag and get up-to-date, relevant information about the stock</h5>
+    </div>
+    <form id = "stock-form" method = "POST">
+        <div id = "stock-search-container">
+            <h1 id = "stock-search">Enter a Stock's Ticker Tag: </h1>
+            <input id = "stock-input" name = "stock-input" type = "text">
+            <input id = "stock-submit" type = "submit" placeholder="submit">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

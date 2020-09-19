@@ -7,12 +7,36 @@
 body{
     background-color: black;
 }
+#navbar{
+    margin: 20px;
+    height: 5vh;
+    display: flex;
+    font-size: 1.2em;
+    justify-content: space-evenly;
+    
+}
+.link{
+    color: #61C604; 
+    transition: 0.2s;
+}
+.link:hover{
+    color: #499205; 
+    transition: 0.2s;
+}
+#right-links{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-elem{
+    padding: 10px;
+    color: #61C604;
+}
 #content-wrapper{
     background-color: black;
     height: 100%;
 }
 #welcome-wrapper{
-    height: 90vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,8 +62,82 @@ body{
     background-color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #features-intro{
+    text-align: center;
     width: 80%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#stock-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#stock-title{
+    margin-top: 5%;
+}
+#stock-welcome{
+    color: #61C604;
+    text-align: center;
+}
+#stock-secondary{
+    color: #61C604;
+    text-align: center;
+}
+#stock-form{
+    display: flex;
+    margin-left: 5%;
+}
+#stock-search-container{
+    margin-top: 30vh;
+}
+#stock-search{
+    display: inline
+}
+#stock-input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 30px;
+    max-width: 100px;
+    text-align: center;
+}
+#stock-input:focus{
+    outline: none
+}
+#stock-submit{
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+#stock-submit:hover{
+    cursor: pointer;
+}
+
+
+
+#learn-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#learn-title{
+    margin-top: 5%;
+}
+#learn-welcome{
+    color: #61C604;
+    text-align: center;
+}
+#learn-secondary{
+    color: #61C604;
+    text-align: center;
 }

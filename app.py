@@ -1,4 +1,4 @@
-from flask import Flask, url_for, render_template
+from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__)
 
@@ -7,13 +7,18 @@ app = Flask(__name__)
 def index():
     return render_template('welcome.html')
 
-@app.route('/stocks')
+@app.route('/stocks', methods= ['GET', 'POST'])
 def stocks():
-    return "Stocks page"
+    if request.method == 'POST':
+        ticker_tag = request.form['stock-input']
+        print(ticker_tag)
+    else:
+        pass
+    return render_template('stocks.html')
 
 @app.route('/learn')
 def learn():
-    return "Learn page"
+    return render_template('learn.html')
 
 @app.route('/trends')
 def trends():
