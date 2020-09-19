@@ -10,10 +10,13 @@ def index():
 @app.route('/stocks', methods= ['GET', 'POST'])
 def stocks():
     if request.method == 'POST':
+        #ticker_tag is the stock they pick
         ticker_tag = request.form['stock-input']
         analysis = stock_info(ticker_tag)
         results = analysis.get_info()
-        print(results)
+        
+        #add your code here
+
         return render_template('stocks.html', results = results)
     else:
         pass
