@@ -13,6 +13,27 @@
             <input id = "stock-submit" type = "submit" placeholder="submit">
         </div>
     </form>
+    {% if results|length > 1 %}
+    <div id= "reccomendation">Yahoo Finance: {{results['Recommendation']}}</div>
+    <div id = "stock-info-table">
+        <h3 class= 'info' id = "previous-close">Previous Close: {{results['Previous_Close']}}</h3>
+        <h3 class = 'info' id = 'open'>Open: {{results['Open']}}</h3>
+        <h3 class = 'info' id = "bid">Bid: {{results['Bid']}}</h3>
+        <h3 class= 'info' id = "ask">Ask: {{results['Ask']}}</h3>
+        <h3 class= 'info' id = "day-range">Day's Range: {{results["Day's Range"]}}</h3>
+        <h3 class= 'info' id = "week-range">52 Week Range: {{results['52 Week Range']}}</h3>
+        <h3 class= 'info' id = "volume"> Volume: {{results['Volume']}}</h3>
+        <h3 class= 'info' id = "avg-volume">Average Volume: {{results['Average Volume']}}</h3>
+        <h3 class= 'info' id = "market-cap">Market Cap: {{results['Market Cap']}}</h3>
+        <h3 class= 'info' id = "beta-3yr-monthly">Beta 3 Year Monthly: {{results['Beta 3yr Monthly']}}</h3>
+        <h3 class= 'info' id = "pe-ratio">Price to Earnings Ratio: {{results['P/E Ratio (TTM)']}}</h3>
+        <h3 class= 'info' id = "eps">EPS: {{results['EPS (TTM)']}}</h3>
+        <h3 class= 'info' id = "earnings-date">Earnings Date: {{results['Earnings Date']}}</h3>
+        <h3 class= 'info' id = "dividend-yield">Forward Dividend Yield: {{results['Forward Dividend & Yield']}}</h3>
+        <h3 class= 'info' id = "ex-dividend">Ex-Dividend Date: {{results['Ex-Dividend Date']}}</h3>
+        <h3 class= 'info' id = "one-year-est">1 Year Target Estimate: {{results['1 yr Target Estimate']}}</h3>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
