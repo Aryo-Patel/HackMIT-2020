@@ -71,3 +71,37 @@
 #quiz-submit:hover{
     cursor: pointer;
 }
+
+#answer-check{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+}
+#wrong-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#wrong-message{
+    color: rgba(255, 0, 0, 0.753)
+}
+#another-question{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    font-size: 1.2em;
+}
+
+#another-question:hover{
+    cursor:pointer;
+    transition: 0.2s;
+    border-bottom: 1px solid white;
+}
+
+#success-message{
+    color: #61C604;   
+}

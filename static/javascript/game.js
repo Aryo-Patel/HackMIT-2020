@@ -41,7 +41,9 @@ createMainMenu();
 
 
 function playInterior(){
-    gameArea.removeChild(playGame);
+    Array.from(gameArea.children).forEach(child => {
+        gameArea.removeChild(child);
+    })
 
     let dictLength = Object.keys(terms).length
     let definition = Object.values(terms)[Math.floor(Math.random()*dictLength)];
@@ -76,7 +78,7 @@ function playInterior(){
     submit.id = 'quiz-submit';
     submit.textContent  = 'Submit';
     submit.addEventListener('click', e =>{
-        answerCheckInterior(answer);
+        answerCheckInterior(answer, definition);
     })
 
     submitBundle.appendChild(answer);
@@ -91,6 +93,48 @@ function playInterior(){
 }
 
 
-function answerCheckInterior(answer){
-    console.log(answer.value);
+function answerCheckInterior(answer, definition){
+    let correctTerm = Object.keys(terms).filter(key => terms[key] == definition)[0];
+    Array.from(gameArea.children).forEach(child => {
+        gameArea.removeChild(child);
+    })
+
+    let answerCheckDiv = document.createElement('div');
+    answerCheckDiv.id = 'answer-check';
+    correctTerm = correctTerm.toLowerCase();
+    let answerCheck = answer.value.toLowerCase();
+    if(correctTerm == answerCheck){
+        let successMessage = document.createElement('h1');
+        successMessage.id = "success-message";
+        successMessage.innerHTML = "Nice Job!"
+
+        answerCheckDiv.appendChild(successMessage);
+    }
+    else{
+        let wrongDiv = document.createElement('div');
+        wrongDiv.id = 'wrong-div';
+
+        let wrongMessage = document.createElement('h1');
+        wrongMessage.id = 'wrong-message';
+        wrongMessage.innerHTML = "Better Luck Next Time"
+
+        let rightAnswer = document.createElement('p');
+        rightAnswer.id = 'right-answer';
+        rightAnswer.textContent = "The correct answer was: " + correctTerm;
+
+        wrongDiv.appendChild(wrongMessage);
+        wrongDiv.appendChild(rightAnswer);
+
+        answerCheckDiv.appendChild(wrongDiv);
+    }
+
+    let anotherQuestion = document.createElement('button');
+    anotherQuestion.id = 'another-question';
+    anotherQuestion.textContent = 'Click here for another question';
+    anotherQuestion.addEventListener('click', e => {
+        playInterior();
+    })
+
+    answerCheckDiv.appendChild(anotherQuestion);
+    gameArea.appendChild(answerCheckDiv);
 }
