@@ -1,6 +1,6 @@
 from flask import Flask, url_for, render_template, request
 from retrieveStockInfo import stock_info
-from Predictions import ML
+from Prediction import ML
 app = Flask(__name__)
 
 
