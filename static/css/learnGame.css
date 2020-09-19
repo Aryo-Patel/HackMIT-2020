@@ -1,0 +1,31 @@
+#game-wrapper{
+    margin-top: 5%;
+}
+#game-wrapper-welcome{
+    color: #61C604;
+}
+
+#game-area{
+    min-height: 300px;
+    border: 2px solid white;
+    margin-top: 20px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#play-game{
+    background-color: transparent;
+    font-size: 1.4em;
+    color: #61C604;
+    transition: 0.3s;
+    outline: none;
+    border: none;
+}
+#play-game:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    border-bottom: 2px solid #499205;
+
+}

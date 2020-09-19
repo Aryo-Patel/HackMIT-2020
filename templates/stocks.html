@@ -10,9 +10,15 @@
         <div id = "stock-search-container">
             <h1 id = "stock-search">Enter a Stock's Ticker Tag: </h1>
             <input id = "stock-input" name = "stock-input" type = "text">
-            <span id = "our-analysis-header">Click here to get our analysis on the stock as well: </span>
-            <input name = "our-analysis" id = "our-analysis" type = "checkbox">
-            <input id = "stock-submit" type = "submit" placeholder="submit">
+            <br>
+            <div id = "our-analysis-wrapper">
+                <span id = "our-analysis-header">Click here to get our analysis on the stock as well: </span>
+                <input name = "our-analysis" id = "our-analysis" type = "checkbox">
+            </div>
+            <div id = "stock-submit-wrapper">
+                <input id = "stock-submit" type = "submit" placeholder="submit">
+            </div>
+            
         </div>
     </form>
     {% if results|length > 1 %}
