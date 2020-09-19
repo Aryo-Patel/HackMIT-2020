@@ -33,14 +33,14 @@ function createMainMenu(){
     playGame.id = 'play-game'
     playGame.textContent = 'Play Game';
     playGame.addEventListener('click', e => {
-        changeInterior();
+        playInterior();
     })
     gameArea.appendChild(playGame);
 }
 createMainMenu();
 
 
-function changeInterior(){
+function playInterior(){
     gameArea.removeChild(playGame);
 
     let dictLength = Object.keys(terms).length
@@ -66,15 +66,31 @@ function changeInterior(){
     let answer = document.createElement('input');
     answer.id = 'answer';
     answer.placeholder = 'Type your answer here';
+    answer.addEventListener('keypress', e =>{
+        if(e.key == 'Enter'){
+            answerCheckInterior(answer, definition);
+        }
+    })
 
     let submit = document.createElement('button');
     submit.id = 'quiz-submit';
     submit.textContent  = 'Submit';
+    submit.addEventListener('click', e =>{
+        answerCheckInterior(answer);
+    })
 
     submitBundle.appendChild(answer);
     submitBundle.appendChild(submit);
+
     containerDiv.appendChild(prompt);
     containerDiv.appendChild(displayDefinition);
-    gameArea.appendChild(containerDiv)
+    containerDiv.appendChild(submitBundle);
 
+
+    gameArea.appendChild(containerDiv)
+}
+
+
+function answerCheckInterior(answer){
+    console.log(answer.value);
 }
