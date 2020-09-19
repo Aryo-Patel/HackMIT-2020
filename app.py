@@ -11,13 +11,28 @@ def index():
 @app.route('/stocks', methods= ['GET', 'POST'])
 def stocks():
     if request.method == 'POST':
+        ticker_tag = ""
+        use_analysis = ""
         #ticker_tag is the stock they pick
-        ticker_tag = request.form['stock-input']
-        analysis = stock_info(ticker_tag)
-        results = analysis.get_info()
+        try:
+            ticker_tag = request.form['stock-input']
+            use_analysis = request.form['our-analysis']
+        except:
+            pass
+       
+        print(request.form)
+        results = {}
+        analysis = ""
+        if ticker_tag != "":
+            analysis = stock_info(ticker_tag)
+            results = analysis.get_info()
+
+        if use_analysis == 'on' and ticker_tag != "":
+            x = ML(ticker_tag)
+            x.get_prediction()
+       
         print(results)
-        x = ML(ticker_tag)
-        x.get_prediction()
+
         return render_template('stocks.html', results = results)
     else:
         pass

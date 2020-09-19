@@ -10,6 +10,8 @@
         <div id = "stock-search-container">
             <h1 id = "stock-search">Enter a Stock's Ticker Tag: </h1>
             <input id = "stock-input" name = "stock-input" type = "text">
+            <span id = "our-analysis-header">Click here to get our analysis on the stock as well: </span>
+            <input name = "our-analysis" id = "our-analysis" type = "checkbox">
             <input id = "stock-submit" type = "submit" placeholder="submit">
         </div>
     </form>
@@ -35,5 +37,5 @@
     </div>
     {% endif %}
 </div>
-
+<script src = "{{url_for('static', filename = 'javascript/formFunctionality.js')}}"></script>
 {% endblock %}
