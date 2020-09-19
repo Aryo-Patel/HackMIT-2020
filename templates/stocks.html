@@ -34,8 +34,8 @@
         <h3 class= 'info' id = "avg-volume">Average Volume: {{results['Average Volume']}}</h3>
         <h3 class= 'info' id = "market-cap">Market Cap: {{results['Market Cap']}}</h3>
         <h3 class= 'info' id = "beta-3yr-monthly">Beta 3 Year Monthly: {{results['Beta 3yr Monthly']}}</h3>
-        <h3 class= 'info' id = "pe-ratio">Price to Earnings Ratio: {{results['P/E Ratio (TTM)']}}</h3>
-        <h3 class= 'info' id = "eps">EPS: {{results['EPS (TTM)']}}</h3>
+        <h3 class= 'info' id = "pe-ratio">P/E Ratio: {{results['P/E Ratio (TTM)']}}</h3>
+        <h3 class= 'info' id = "eps">Earnings Per Share: {{results['EPS (TTM)']}}</h3>
         <h3 class= 'info' id = "earnings-date">Earnings Date: {{results['Earnings Date']}}</h3>
         <h3 class= 'info' id = "dividend-yield">Forward Dividend Yield: {{results['Forward Dividend & Yield']}}</h3>
         <h3 class= 'info' id = "ex-dividend">Ex-Dividend Date: {{results['Ex-Dividend Date']}}</h3>
@@ -44,4 +44,6 @@
     {% endif %}
 </div>
 <script src = "{{url_for('static', filename = 'javascript/formFunctionality.js')}}"></script>
+<script src = "{{url_for('static', filename = 'javascript/stockTerms.js')}}"></script>
+
 {% endblock %}

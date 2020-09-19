@@ -13,3 +13,19 @@
     padding: 10px;
     font-weight: normal;
 }
+.info:hover{
+    cursor: default;
+}
+
+.blurb{
+    position: absolute;
+    height: 50px;
+    background-color: rgba(85, 84, 84, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blurb-text{
+    text-align: center;;
+}
