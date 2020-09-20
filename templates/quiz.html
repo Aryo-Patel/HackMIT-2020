@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block body %}
+<div id = "learn-content-wrapper">
+    <div id = "learn-title">
+        <h1 id = "learn-welcome">Think you understand financial terms?</h1>
+        <h5 id = "learn-secondary">Take this quiz to find out!</h5>
+    </div>
+    <div id = "game-wrapper">
+        <h3 id = "game-wrapper-welcome">Test your knowledge of the terms on this quiz!</h3>
+        <div id = "game-area">
+            
+        </div>
+    </div>
+</div>
+
+<script src = "{{url_for('static', filename='javascript/game.js')}} " ></script>
+{%  endblock %}

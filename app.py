@@ -42,9 +42,9 @@ def stocks():
 def learn():
     return render_template('learn.html')
 
-@app.route('/trends')
-def trends():
-    return "Trends"
+@app.route('/quiz')
+def quiz():
+    return render_template('quiz.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

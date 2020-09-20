@@ -6,6 +6,7 @@
         <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/stockInfo.css')}}" />
         <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/learnGame.css')}}" />
         <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/learn.css')}}" />
+        <link rel = "stylesheet" type = "text/css" href = "{{url_for('static', filename='css/styless.css')}}" />
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
@@ -16,10 +17,23 @@
                 <h4 class = "nav-elem" id = "home-page"><a class = "link" href = "/">Home</a></h4>
                 <h4  class = "nav-elem" id= "stocks"><a class = "link"  href = "/stocks">Stocks</a></h4>
                 <h4 class = "nav-elem" id = "learn"><a  class = "link" href = "/learn">Learn</a></h4>
-                <h4 class = "nav-elem" id = "trends"><a class = "link"  href = "/trends">Trends</a></h4>
+                <h4 class = "nav-elem" id = "trends"><a class = "link"  href = "/quiz">Quiz</a></h4>
             </div>
         </nav>
-
+        <div class="wrapper">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         {% block body %}{% endblock %}
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
         <script src = "{{url_for('static', filename='javascript/animations.js')}}"></script>
