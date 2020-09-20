@@ -99,6 +99,17 @@ a{
 #our-analysis-wrapper{
     margin: 10px;
 }
+#info-button{
+    background-color: black;
+    outline: none;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+#info-button:hover{
+    cursor: pointer;
+}
 #stock-search-container{
     margin-top: 10vh;
 }
