@@ -1,6 +1,6 @@
 let terms = {"Investor": "Person purchasing the stock",
 "Shareholder": "Person selling the stock",
-"Current Price": "The most recent selling price of an asset"
+"Current Price": "The most recent selling price of an asset",
 "Previous Close": "The last price of the stock from when the market closed on the previous trading day",
 "Open": "The starting price of trading for this trading day",
 "Change": "How many points the stock rose/fell during the trading day. This value is calculated by taking the current value and subtracting the previous day's closing value.",
