@@ -1,0 +1,36 @@
+#list-wrapper{
+    display: grid;
+    grid-template-rows: 1fr;
+    row-gap: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+}
+.chunk{
+    display: flex;
+}
+.chunk > img{
+    padding: 20px;
+}
+.text-grouping > h2{
+    margin-bottom: 10px;
+}
+.chunk:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.chunk:nth-child(2n) > .text-grouping > h2{
+    text-align: right;
+}
+@keyframes fadeRight{
+    from {
+        opacity: 0;
+        transform: translateX(100%)
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.fadeFromRight{
+    animation: fadeRight 2s, smooth;
+}

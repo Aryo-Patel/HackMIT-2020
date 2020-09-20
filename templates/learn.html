@@ -9,83 +9,123 @@
     <div id= "learn-list">
         <div id = "list-wrapper">
         <div class = "chunk">
-            <h2>Previous Close</h2>
-            <p>Previous close refers to the last traded price reported during a given time period. This is most commonly reported on a daily time frame.</p>
-            <img class="center" width="400" height="300" src = "images/previous_close.png">
+            <div class = "text-grouping">
+                <h2>Previous Close</h2>
+                <p>Previous close refers to the last traded price reported during a given time period. This is most commonly reported on a daily time frame.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename='images/previous_close.png')}}">
         </div>
         <div class = "chunk">
-            <h2>Open</h2>
-            <p>The opening price is the first price that a security trades for when an exchange opens for the day. This price is typically not the same as the previous day's closing price due to orders that accumulated after-hours on the previous night, some of which will not be executed until the market opens on the next business day. Several day-trading strategies are based on this principle.</p>
-            <img class="center" width="400" height="300" src = "images/opening.jpg">
+            <div class = "text-grouping">
+                <h2>Open</h2>
+                <p>The opening price is the first price that a security trades for when an exchange opens for the day. This price is typically not the same as the previous day's closing price due to orders that accumulated after-hours on the previous night, some of which will not be executed until the market opens on the next business day. Several day-trading strategies are based on this principle.</p>
+            </div>  
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename='images/opening.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Bid</h2>
-            <p>A bid specifies the price at which a market maker is willing to buy a security, as well as the quantity that they are willing to purchase at that price.</p>
-            <img class="center" width="550" height="300" src = "images/bid:ask.png">
+            <div class = "text-grouping">
+                <h2>Bid</h2>
+                <p>A bid specifies the price at which a market maker is willing to buy a security, as well as the quantity that they are willing to purchase at that price.</p>
+            </div>
+            <img class="center" width="550" height="300" src = "{{url_for('static', filename='images/bid_ask.png')}}">
         </div>
         <div class = "chunk">
-            <h2>Ask</h2>
-            <p>The ask, or offer price, specifies the price a seller is willing to accept for a security. This typically comes with the amount of that stock that the seller is willing to offer at that price.</p>
+            <div class = "text-grouping">
+                <h2>Ask</h2>
+                <p>The ask, or offer price, specifies the price a seller is willing to accept for a security. This typically comes with the amount of that stock that the seller is willing to offer at that price.</p>
+            </div>
+            <div class = "center" style="width: 400px; height: 100px;"></div>
         </div>
         <div class = "chunk">
-            <h2>Day's Range</h2>
-            <p>Range refers to the difference between the low and high prices for a security over a day. A large range suggests price volatility, which is a good indicator of a security's risk. Those with low risk tolerances will often opt to purchase securities with a lower range, such as stocks found in the stabler sectors like utilities, healthcare, and telecommunications.</p>
-            <img class="center" width="400" height="300" src = "images/range.png">
+            <div class = "text-grouping">
+                <h2>Day's Range</h2>
+                <p>Range refers to the difference between the low and high prices for a security over a day. A large range suggests price volatility, which is a good indicator of a security's risk. Those with low risk tolerances will often opt to purchase securities with a lower range, such as stocks found in the stabler sectors like utilities, healthcare, and telecommunications.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename='images/range.png')}}">
         </div>
         <div class = "chunk">
-            <h2>52 Week Range</h2>
-            <p>The 52-week range is a data point containing the highest and lowest published price of a security over the previous year. Analysts use this range and other trend observations to understand volatility and predict trading opportunities.</p>
-            <img class="center" width="400" height="300" src = "images/52weekrange.jpg">
+            <div class = "text-grouping">
+                <h2>52 Week Range</h2>
+                <p>The 52-week range is a data point containing the highest and lowest published price of a security over the previous year. Analysts use this range and other trend observations to understand volatility and predict trading opportunities.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/52weekrange.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Volume</h2>
-            <p>Volume refers to the amount of a security that is bought and sold over some period of time. Generally, securities with higher daily volumes are more liquid since they are more active. Volume levels provide clues about when the best times to buy and sell are.</p>
-            <img class="center" width="500" height="300" src = "images/volume.jpg">
+            <div class= "text-grouping">
+                <h2>Volume</h2>
+                <p>Volume refers to the amount of a security that is bought and sold over some period of time. Generally, securities with higher daily volumes are more liquid since they are more active. Volume levels provide clues about when the best times to buy and sell are.</p>
+            </div>
+
+            <img class="center" width="500" height="300" src = "{{url_for('static', filename = 'images/volume.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Average Volume</h2>
-            <p>Average Daily Trading Volume (ADTV) refers to how many shares are traded per day, which is typically calculated over a 20-30 day period. Usually, stocks with higher ADTV are less volatile because much larger trades would have to be made to affect the price. Higher ADTV is also an indicator of the security’s overall liquidity.</p>
-            <img class="center" width="500" height="350" src = "images/averagetradingvolume.jpg">
+            <div class = "text-grouping">
+                <h2>Average Volume</h2>
+                <p>Average Daily Trading Volume (ADTV) refers to how many shares are traded per day, which is typically calculated over a 20-30 day period. Usually, stocks with higher ADTV are less volatile because much larger trades would have to be made to affect the price. Higher ADTV is also an indicator of the security’s overall liquidity.</p>
+            </div>
+
+            <img class="center" width="500" height="350" src = "{{url_for('static', filename = 'images/averagetradingvolume.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Market Cap</h2>
-            <p>Market capitalization refers to the total worth of a company based off of their stocks. This value is found by multiplying the number of outstanding shares by the current value of each share, this makes it a real-time estimate of the company’s value. Higher market cap ($10 billion or more) indicates that a company is typically well established and less risky.</p>
-            <img class="center" width="400" height="300" src = "images/marketcap.jpg">
+            <div class = "text-grouping">
+                <h2>Market Cap</h2>
+                <p>Market capitalization refers to the total worth of a company based off of their stocks. This value is found by multiplying the number of outstanding shares by the current value of each share, this makes it a real-time estimate of the company’s value. Higher market cap ($10 billion or more) indicates that a company is typically well established and less risky.</p>
+            </div>
+
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/marketcap.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Beta 3 Year Monthly</h2>
-            <p>Beta is the monthly price change of a particular company relative to the monthly price change of the S&P 500 over a time period of 3 years. Beta is an indicator of a security’s market risk or volatility relative to stocks in general. A beta greater than 1 indicates volatility greater than the S&P 500. Typically, many new technology companies have this level of beta. Conversely, a beta of one or lower indicates that a stock’s price is steadier than most stocks. Understanding beta can help an investor choose the securities that match their level of risk-tolerance.</p>
-            <img class="center" width="400" height="300" src = "images/beta.png">
+            <div class = "text-grouping">
+                <h2>Beta 3 Year Monthly</h2>
+                <p>Beta is the monthly price change of a particular company relative to the monthly price change of the S&P 500 over a time period of 3 years. Beta is an indicator of a security’s market risk or volatility relative to stocks in general. A beta greater than 1 indicates volatility greater than the S&P 500. Typically, many new technology companies have this level of beta. Conversely, a beta of one or lower indicates that a stock’s price is steadier than most stocks. Understanding beta can help an investor choose the securities that match their level of risk-tolerance.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/beta.png')}}">
         </div>
         <div class = "chunk">
-            <h2>Price to Earnings Ratio</h2>
-            <p>The P/E represents the amount of money an investor can expect to have to invest in order to receive one dollar of the company’s earnings. This value is determined by dividing the current stock price by the earnings per share. A high P/E value can mean that a stock’s price is high relative to earnings and thus the stock may be overvalued, or that high growth rates may be expected in the future.</p>
-            <img class="center" width="400" height="300" src = "images/pricetoearnings.jpg">
+            <div class  = 'text-grouping'>
+                <h2>Price to Earnings Ratio</h2>
+                <p>The P/E represents the amount of money an investor can expect to have to invest in order to receive one dollar of the company’s earnings. This value is determined by dividing the current stock price by the earnings per share. A high P/E value can mean that a stock’s price is high relative to earnings and thus the stock may be overvalued, or that high growth rates may be expected in the future.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/pricetoearnings.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>EPS</h2>
-            <p>Earnings per share (EPS) indicates a company's profitability. This value is found by dividing the net profit of the company by the total outstanding shares of its common stock. Higher EPS values indicate that a stock will make an investor more money per dollar invested, which indicates that the stock may be highly profitable."</p>
-            <img class="center" width="400" height="300" src = "images/eps.jpg">
+            <div class = "text-grouping">
+                <h2>EPS</h2>
+                <p>Earnings per share (EPS) indicates a company's profitability. This value is found by dividing the net profit of the company by the total outstanding shares of its common stock. Higher EPS values indicate that a stock will make an investor more money per dollar invested, which indicates that the stock may be highly profitable."</p>
+            </div>
+ 
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/eps.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>Earnings Date</h2>
-            <p>The earnings date is the day in which a company makes an official public statement of their quarterly earnings. The days leading up to this date causes a lot of speculative trading between investors and analysts, which typically leads to an artificial inflation of the share price and affects the next day’s open.</p>
-            <img class="center" width="400" height="300" src = "images/earningsdate.png">
+            <div class = "text-grouping">
+                <h2>Earnings Date</h2>
+                <p>The earnings date is the day in which a company makes an official public statement of their quarterly earnings. The days leading up to this date causes a lot of speculative trading between investors and analysts, which typically leads to an artificial inflation of the share price and affects the next day’s open.</p>
+            </div>
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/earningsdate.png')}}">
         </div>
         <div class = "chunk">
-            <h2>Forward Divident Yield</h2>
-            <p>While most of a company’s profits are retained, a company will elect to apportion some of these profits to shareholders of that company. The ratio of these distributed funds relative to its stock price is the dividend yield, and this indicates how much the company will pay out in dividends. A forward dividend yield predicts the percentage of a company’s current stock price to be paid out as dividends over a given time period, which is generally 12 months.</p>
-            <img class="center" width="400" height="300" src = "images/forwarddividentyield.png">
+            <div class = "text-grouping">
+                <h2>Forward Divident Yield</h2>
+                <p>While most of a company’s profits are retained, a company will elect to apportion some of these profits to shareholders of that company. The ratio of these distributed funds relative to its stock price is the dividend yield, and this indicates how much the company will pay out in dividends. A forward dividend yield predicts the percentage of a company’s current stock price to be paid out as dividends over a given time period, which is generally 12 months.</p>
+            </div>
+
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/forwarddividentyield.png')}}">
         </div>
         <div class = "chunk">
-            <h2>Ex-Dividend Date</h2>
-            <p>Investors must have owned their shares before the ex-dividend day in order to be eligible to receive a company’s upcoming dividend. This date is typically set two business days before the record date. Investors typically want to buy stock before the ex-dividend day, but because the stock will usually decline in price on the ex-dividend date, those who miss the deadline buy the stock at a discounted price by buying on the ex-dividend date</p>
-            <img class="center" width="400" height="300" src = "images/exdivdate.jpg">
+            <div class = "text-grouping">
+                <h2>Ex-Dividend Date</h2>
+                <p>Investors must have owned their shares before the ex-dividend day in order to be eligible to receive a company’s upcoming dividend. This date is typically set two business days before the record date. Investors typically want to buy stock before the ex-dividend day, but because the stock will usually decline in price on the ex-dividend date, those who miss the deadline buy the stock at a discounted price by buying on the ex-dividend date</p>
+            </div>
+
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename = 'images/exdivdate.jpg')}}">
         </div>
         <div class = "chunk">
-            <h2>1 Year Target Estimate</h2>
-            <p>The target estimate is the value that various analysts believe a stock will be priced after a year. It is important to note that while analysts perform careful and detailed analysis to arrive at the target estimate, the price is only a calculated guess. However, these estimates often affect how investors interact with a stock, which can significantly impact the price of a security. Therefore, this value can help traders determine when they want to buy or sell a stock.</p>
-            <img class="center" width="400" height="300" src = "images/1yeartargetestimate.png">
+            <div class  = "text-grouping">
+                <h2>1 Year Target Estimate</h2>
+                <p>The target estimate is the value that various analysts believe a stock will be priced after a year. It is important to note that while analysts perform careful and detailed analysis to arrive at the target estimate, the price is only a calculated guess. However, these estimates often affect how investors interact with a stock, which can significantly impact the price of a security. Therefore, this value can help traders determine when they want to buy or sell a stock.</p>
+            </div>
+
+            <img class="center" width="400" height="300" src = "{{url_for('static', filename= 'images/1yeartargetestimate.png')}}">
         </div>
     </div>
     </div>

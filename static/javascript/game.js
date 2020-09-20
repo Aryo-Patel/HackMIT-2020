@@ -55,7 +55,7 @@ function playInterior(){
 
     let prompt = document.createElement('h3');
     prompt.id = 'prompt';
-    prompt.innerHTML = "What term does the following defnition correspond to?"
+    prompt.innerHTML = "What term does the following definition correspond to?"
 
 
     let displayDefinition = document.createElement('p');
