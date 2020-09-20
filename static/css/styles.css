@@ -142,7 +142,7 @@ a{
     height: 100vh;
 }
 #learn-title{
-    margin-top: 5%;
+    margin-top: 15px;
 }
 #learn-welcome{
     color: #61C604;
@@ -152,3 +152,4 @@ a{
     color: #61C604;
     text-align: center;
 }
+

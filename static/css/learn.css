@@ -1,3 +1,27 @@
+#learn-list{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#search-bar{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 70%;
+    font-size: 1.8em;
+    border-bottom: 1px solid white;
+}
+#search-bar:active{
+    border: none;
+    outline: none
+}
 #list-wrapper{
     display: grid;
     grid-template-rows: 1fr;
@@ -31,6 +55,21 @@
         opacity: 1;
     }
 }
+
+@keyframes fadeLeft{
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .fadeFromRight{
-    animation: fadeRight 2s, smooth;
+    animation: fadeRight 2s forwards;
+}
+
+.fadeFromLeft{
+    animation: fadeLeft 2s forwards;
 }
