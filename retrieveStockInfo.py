@@ -20,9 +20,11 @@ class stock_info:
         tagged_values = soup.find_all("td", {'class': 'Ta(end) Fw(600) Lh(14px)'})
         recommendation_value = (soup.find("div", {'class': "Fw(b) Fl(end)--m Fz(s) C($primaryColor"})).get_text()
         price = soup.find("span", {'class': "Trsdu(0.3s) Fw(b) Fz(36px) Mb(-4px) D(ib)"}).get_text()
-        change = soup.find("span", {'class': 'Trsdu(0.3s) Fw(500) Pstart(10px) Fz(24px) C($negativeColor)'}).get_text()
+        change = soup.find("span", {'class': 'Trsdu(0.3s) Fw(500) Pstart(10px) Fz(24px) C($negativeColor)'})
+        if change == None:
+            change = soup.find("span", {'class': 'Trsdu(0.3s) Fw(500) Pstart(10px) Fz(24px) C($positiveColor)'})
         
-        change = change.split()
+        change = (change.get_text()).split()
         values = []
         titles = ["Previous_Close", "Open", "Bid", "Ask", "Day's Range", "52 Week Range", "Volume", "Average Volume", "Market Cap", "Beta 3yr Monthly", "P/E Ratio (TTM)", "EPS (TTM)", "Earnings Date", "Forward Dividend & Yield", "Ex-Dividend Date", "1 yr Target Estimate"]
         value_dict = {}
