@@ -24,6 +24,9 @@
     {% if results|length > 1 %}
     <div id= "reccomendation">Yahoo Finance: {{results['Recommendation']}}</div>
     <div id = "stock-info-table">
+        <h3 class= 'info' id = "current-price">Current Price: {{results['Current Price']}}</h3>
+        <h3 class = 'info' id = 'change'>Change: {{results['Change']}}</h3>
+        <h3 class = 'info' id = "percent-change">Percent Change: {{results['Percent Change']}}</h3>
         <h3 class= 'info' id = "previous-close">Previous Close: {{results['Previous_Close']}}</h3>
         <h3 class = 'info' id = 'open'>Open: {{results['Open']}}</h3>
         <h3 class = 'info' id = "bid">Bid: {{results['Bid']}}</h3>
